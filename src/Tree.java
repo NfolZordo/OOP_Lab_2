@@ -1,37 +1,40 @@
 public class Tree {
-    String type;
-    int height;          //висота
-    float widthTrunk;    //діаметр стовбуру
-    float widthVrown;    //діаметр крони
-    int age;
-    static float widthArea;
-    static float widthShadow;
+    private String nameBrand;
+    private int numberPackages;     //кількість упаковок
+    private float weightOne;          //вага 1 упаковки
+    private int numberDaysStorage;    //кількість днів зберігання
+    private float weightTotal;          //Загальна вага партії
+
+
     Tree() {
-        type= "Tree";
-        height = 100;          //висота
-        widthTrunk = 3;    //діаметр стовбуру
-        widthVrown = 20;    //діаметр крони
-        age = 40;
+        this.nameBrand= "Coffee";
+        this.numberPackages = 100;
+        this.weightOne = 100;
+        this.numberDaysStorage = 20;
+        this.weightTotal = numberPackages * weightOne;
     }
-    Tree(float widthTrunk, float widthVrown){
-        widthArea = (float) ((widthTrunk+widthVrown) * 3.41);
+    Tree(String nameBrand,int numberPackages,float weightOne,int numberDaysStorage) {
+        this.nameBrand= nameBrand;
+        this.numberPackages = numberPackages;
+        this.weightOne = weightOne ;
+        this.numberDaysStorage = numberDaysStorage;
+        this.weightTotal = numberPackages * weightOne;
     }
 
-    Tree(float widthTrunk, float widthVrown, int height){
-        this(widthTrunk, widthVrown);
-        widthShadow = (float) ((widthArea*height) * 0.2);
+    public String getNameBrand(){
+        return(nameBrand);
+    }
+    public int getNumberPackages(){
+        return(numberPackages);
+    }
+    public float getWeightOne(){
+        return(weightOne);
+    }
+    public int getNumberDaysStorage(){
+        return(numberDaysStorage);
+    }
+    public float getWeightTotal(){
+        return(weightTotal);
     }
 
-    float getArea(){
-        //     new Tree(widthTrunk, widthVrown);
-        return widthArea;
-
-    }
-    float getAge(){
-        //    new Tree(widthTrunk, widthVrown, height);
-        return widthShadow;
-    }
-    int getHeight(){
-        return height;
-    }
 }
