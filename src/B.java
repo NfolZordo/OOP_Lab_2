@@ -4,12 +4,15 @@ import java.awt.event.*;
 public class B {
 
     static Tree t1;
+
     public static void main(String[] args) {
+
         JFrame frame=new JFrame("Tree");
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(450,350);
         frame.setResizable(false);
+
         JButton createBtn=new JButton("Створити об’єкт");
         createBtn.setBounds(250,30,150,50);
         frame.add(createBtn);
@@ -55,6 +58,7 @@ public class B {
         ageLb.setBounds(25, 190, 100, 30);
         frame.add(ageLb);
 
+
         Label resultLb = new Label("");
         resultLb.setBounds(25, 230, 300, 30);
         frame.add(resultLb);
@@ -64,10 +68,10 @@ public class B {
                 t1 = new Tree();
                 t1.type = typeTf.getText();
                 System.out.println(typeTf.getText());
-                try{
-                t1.height = Integer.parseInt(heightTf.getText());
+                try {
+                    t1.height = Integer.parseInt(heightTf.getText());
                 }
-                catch(Exception ex){}
+                catch(Exception ex) {}
                 try{
                 t1.widthTrunk = Float.parseFloat(widthTrunkTf.getText());
                 }
@@ -87,6 +91,22 @@ public class B {
             }
         });
 
+//        createBtn.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//
+//                int height;          //висота
+//                float widthTrunk;    //діаметр стовбуру
+//                float widthVrown;    //діаметр крони
+//
+//                height = Integer.parseInt(heightTf.getText());
+//                widthTrunk = Float.parseFloat(widthTrunkTf.getText());
+//                widthVrown = Float.parseFloat(widthVrownTf.getText());
+//                t1 = new Tree(widthVrown,widthTrunk,height);
+//                t1.age = Integer.parseInt(ageTf.getText());
+//                t1.height = Integer.parseInt(heightTf.getText());
+//                t1.type = typeTf.getText();
+//            }
+//        });
         areaBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 resultLb.setText(String.valueOf(t1.getArea()));
@@ -100,6 +120,8 @@ public class B {
         heightBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 resultLb.setText(String.valueOf(t1.getHeight()));
+
+
             }
         });
 

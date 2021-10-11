@@ -23,12 +23,12 @@ public class Tree {
     }
 
     float getArea(){
-        new Tree(widthTrunk, widthVrown);
+        //     new Tree(widthTrunk, widthVrown);
         return widthArea;
 
     }
     float getAge(){
-        new Tree(widthTrunk, widthVrown, height);
+        //    new Tree(widthTrunk, widthVrown, height);
         return widthShadow;
     }
     int getHeight(){
