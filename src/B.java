@@ -46,7 +46,7 @@ public class B {
         numberDaysStorageLb.setBounds(25, 150, 100, 30);
         frame.add(numberDaysStorageLb);
         JTextArea allTextArea = new JTextArea("");
-        allTextArea.setBounds(25, 200, 370, 110);
+        allTextArea.setBounds(25, 200, 370, 90);
         frame.add(allTextArea);
 
         createBtn.addActionListener(new ActionListener() {
@@ -61,27 +61,27 @@ public class B {
         });
         areaBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                allTextArea.setText("");
-                allTextArea.append("Назва кави - ");
-                allTextArea.append(String.valueOf(t1.getNameBrand()));
-                allTextArea.append("\n");
-                allTextArea.append("Кількість упаковок - ");
-                allTextArea.append(String.valueOf(t1.getNumberPackages()));
-                allTextArea.append("\n");
-                allTextArea.append("Вага 1 упаковки - ");
-                allTextArea.append(String.valueOf(t1.getWeightOne()));
-                allTextArea.append("\n");
-                allTextArea.append("Загальна вага партії - ");
-                allTextArea.append(String.valueOf(t1.getWeightTotal()));
-                allTextArea.append("\n");
-                allTextArea.append("Кі-сть дн. зберігання - ");
-                allTextArea.append(String.valueOf(t1.getNumberDaysStorage()));
-                allTextArea.append("\n");
+//                allTextArea.setText("");
+//                allTextArea.append("Назва кави - ");
+//                allTextArea.append(String.valueOf(t1.getNameBrand()));
+//                allTextArea.append("\n");
+//                allTextArea.append("Кількість упаковок - ");
+//                allTextArea.append(String.valueOf(t1.getNumberPackages()));
+//                allTextArea.append("\n");
+//                allTextArea.append("Вага 1 упаковки - ");
+//                allTextArea.append(String.valueOf(t1.getWeightOne()));
+//                allTextArea.append("\n");
+//                allTextArea.append("Загальна вага партії - ");
+//                allTextArea.append(String.valueOf(t1.getWeightTotal()));
+//                allTextArea.append("\n");
+//                allTextArea.append("Кі-сть дн. зберігання - ");
+//                 allTextArea.append(String.valueOf(t1.weightTotal ()));
+//                allTextArea.append("\n");
+
+                allTextArea.append(String.valueOf(t1.getCoffeOll()));
 
             }
         });
-
-
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

@@ -27,14 +27,13 @@ public class Tree {
     public int getNumberPackages(){
         return(numberPackages);
     }
-    public float getWeightOne(){
-        return(weightOne);
-    }
+    public float getWeightOne(){return(weightOne);}
     public int getNumberDaysStorage(){
         return(numberDaysStorage);
     }
-    public float getWeightTotal(){
-        return(weightTotal);
-    }
+    public float getWeightTotal(){return(weightTotal);}
 
+    public String getCoffeOll(){
+        return("Назва кави - " + nameBrand+"\n"+"Кількість упаковок - "+numberPackages + "\n" + "Вага 1 упаковки - " + weightOne + "\n" + "Загальна вага партії - " + weightTotal + "\n" + "Кі-сть дн. зберігання - " + weightTotal);
+    }
 }
